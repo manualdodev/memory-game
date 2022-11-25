@@ -25,10 +25,10 @@ header {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 15px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -48,7 +48,7 @@ header {
   position: absolute;
   background-size: cover;
   background-position: center;
-  border: 2px solid #39813a;
+  border: 5px solid #00b5cc;
   border-radius: 5px;
   transition: all 400ms ease;
 }
