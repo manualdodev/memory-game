@@ -70,3 +70,10 @@ header {
   filter: saturate(0);
   opacity: 0.5;
 }
+
+@media screen and (max-width:920px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+
+  }
+}
