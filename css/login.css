@@ -15,8 +15,10 @@
 }
 
 .login__header img {
-  width: 100px;
+  width: 250px;
 }
+
+
 
 .login__header h1 {
   color: #333;
@@ -36,7 +38,8 @@
 }
 
 .login__button {
-  background-color: #ee665c;
+  background-color: #00b5cc;
+  border: 3px solid #b2df28;
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
@@ -48,6 +51,7 @@
 
 .login__button:disabled {
   background-color: #eee;
+  border: 2px solid #969595;
   color: #aaa;
   cursor: auto;
 }
