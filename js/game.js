@@ -81,7 +81,7 @@ const revealCard = ({ target }) => {
   // check if target is not reference to grid div
   if (!target.parentNode.classList.toString().includes("grid")) {
     
-    // function to hidden card after 15 seconds
+    // function to hidden card after 5 seconds
     timeout != null && clearTimeout(timeout);
     timeout = setTimeout(() => {
       if (secondCard === "") {
