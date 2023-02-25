@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
-
+var loop;
 const characters = [
   'beth',
   'jerry',
@@ -100,6 +100,7 @@ const createCard = (character) => {
 }
 
 const loadGame = () => {
+  grid.innerHTML = ''
   const duplicateCharacters = [...characters, ...characters];
 
   const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5);
@@ -111,13 +112,20 @@ const loadGame = () => {
 }
 
 const startTimer = () => {
-
-  this.loop = setInterval(() => {
+  loop != null && clearInterval(this.loop)
+  timer.innerHTML = 0;
+  loop = setInterval(() => {
     const currentTime = +timer.innerHTML;
     timer.innerHTML = currentTime + 1;
   }, 1000);
 
 }
+
+//restart game
+document.querySelector('.restart').addEventListener('click', () =>{
+  startTimer();
+  loadGame();
+})
 
 window.onload = () => {
   spanPlayer.innerHTML = localStorage.getItem('player');
