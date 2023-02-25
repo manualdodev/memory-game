@@ -16,13 +16,19 @@ header {
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.2em;
-  width: 100%;
-  max-width: 800px;
+  width: 80%;
+  max-width: 2000px;
   padding: 30px;
   margin: 0 0 30px;
   border-radius: 5px;
 }
 
+.restart{
+  cursor: pointer;
+}
+.restart:hover{
+  color: red;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
