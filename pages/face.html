@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo2.png" type="image/x-icon">
+    <title>Facebook</title>
+</head>
+
+<body>
+    <h1>Qual destes sites é o correto?</h1><br>
+    <div class="imgs">
+        <img src="../images/facefake.png" class="img1">
+        <img src="../images/faceori.png" class="img2">
+        <p class="result" id="resultado"></p>
+    </div>
+    <button class="btn1" id='op1' onclick="verificarResposta('op2')">Site 1</button>
+    <button class="btn2" id='op2' onclick="verificarResposta('op1')">Site 2</button>
+    <br><br>
+    <p class="result" id="resultado"></p>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            background-color: black;
+            font-family: 'Press Start 2P';
+        }
+
+        h1 {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 40px;
+            justify-content: center;
+            color: whitesmoke
+        }
+
+        .img1 {
+            width: 600px;
+            height: 350px;
+            position: absolute;
+            right: 58%;
+        }
+
+        .img2 {
+            width: 600px;
+            height: 350px;
+            right: 80%;
+            position: absolute;
+            right: 5%;
+            top: 102px;
+        }
+
+        .btn1 {
+            color: white;
+            position: absolute;
+            right: 78%;
+            top: 480px;
+            border-radius: 10px;
+            border-style: none;
+            padding: 15px;
+            width: 160px;
+            background-color: blue;
+            font-family: 'Press Start 2P';
+        }
+
+        .btn2 {
+            color: white;
+            position: absolute;
+            right: 20%;
+            border-radius: 5px;
+            border-style: none;
+            top: 480px;
+            width: 160px;
+            padding: 15px;
+            background-color: blue;
+            font-family: 'Press Start 2P';
+        }
+
+        .result {
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            right: 2%;
+            top: 80%;
+        }
+
+        .btn1:hover,
+        .btn2:hover {
+            opacity: 80%;
+        }
+    </style>
+    <script>
+
+        function verificarResposta(resposta) {
+            var resultadoElemento = document.getElementById("resultado");
+
+            if (resposta === 'op1') {//se resposta = opção 1, guarda 1 acerto do site facebook.
+                resultadoElemento.innerText = 'Parabéns, você acertou! Será redirecionado(a) em 2 segundos.';
+                localStorage.setItem('resultface', 1);
+            } else {
+                resultadoElemento.innerText = 'Você errou. será redirecionado(a) em 2 segundos.';
+                localStorage.setItem('resultface', 0);
+            }
+
+            setTimeout(function () {
+                window.close();//fecha a aba em 2 segundos
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

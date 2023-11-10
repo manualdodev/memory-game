@@ -2,12 +2,14 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-image: url('../images/bg.jpg');
   background-size: cover;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   padding: 20px 20px 50px;
+}
+span{
+  background: none;
 }
 
 header {
@@ -19,8 +21,19 @@ header {
   width: 100%;
   max-width: 800px;
   padding: 30px;
-  margin: 0 0 30px;
+  margin-bottom: 120px;
   border-radius: 5px;
+}
+
+.btnDesisto {/*Botão 'desisto'*/
+  padding: 9px;
+  text-decoration: none;
+  background-color: red;
+  color: white;
+}
+
+.btnDesisto:hover {/*efeito no botão 'desisto'*/
+  opacity: 50%;
 }
 
 .grid {
@@ -33,7 +46,7 @@ header {
 }
 
 .card {
-  aspect-ratio: 3/4;
+  aspect-ratio: 4/4;
   width: 100%;
   border-radius: 5px;
   position: relative;
@@ -48,7 +61,7 @@ header {
   position: absolute;
   background-size: cover;
   background-position: center;
-  border: 5px solid #00b5cc;
+  border: 3px solid #19691d;
   border-radius: 5px;
   transition: all 400ms ease;
 }
@@ -58,7 +71,7 @@ header {
 }
 
 .back {
-  background-image: url('../images/back.png');
+  background-image: url('../images/card2.png');
   backface-visibility: hidden;
 }
 
